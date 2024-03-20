@@ -11,7 +11,7 @@ body {
     justify-content: center; /* This will push the child elements to the center of the page along the y-axis  */
     align-items: center; /* This will push the child elements to the center of the page along the x-axis */
     background: hsl(0, 100%, 74%);
-    background-image: url(./images/bg-intro-desktop.png);
+    background-image: url(./imgs/bg-intro-desktop.png);
     font-family: 'Poppins', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; /* Choose a sans-serif font family to accommodate devices that may not be able to use the Poppins font */
     font-size: 16px;
 }
