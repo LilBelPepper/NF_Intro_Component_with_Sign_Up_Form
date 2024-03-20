@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- This helps display the website properly according to the user's device. User-scalable set to 0 ensures that users will not be able to double tap to zoom in on the website, ensuring for a better user experience. I didn't realize a lot of mobile browsers did this. But I also think it's a bit of a double-edged sword considering some people would like to zoom in on something to see it better.-->
+        
+        <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" alt="Frontend Mentor logo">
+        
+        <!-- Import the Poppins font from Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="index.css"> <!-- Link to the css sheet-->
+        <title>FrontendMentor | Intro Component with Sign Up Form</title>
+    </head>
+    <body>
+        
+        <main role="main">
+            <div id="mainDescription">
+                <h1 id="pageTitle">Learn to code by watching others</h1>
+                <p id="pageSubTitle">
+                    See how experienced developers solve problems in real time. <br>
+                    Watching scripted tutorials is great, but understanding 
+                    how developers think is invaluable.
+                </p>
+            </div>
+            <!-- Here begins the registration form, or the right side of the website. -->
+            <div id="formColumn">
+                <div id="freeTrialContainer">
+                    <p id="freeTrialString"><span id="trialLength">Try it free for 7 days</span> then $20/mo. thereafter</p> 
+                </div>
+                <div id="formContainer"> 
+                    <form id="registrationForm" role="presentation"> <!-- If I add method="post" here, the website will not return because it's trying to grab something when there is nothing.-->
+                        
+                        <!-- Because the form does not have any visible labels, we are going to use aria-labels in order to help with accessibility.
+                        The aria-label can be used in situations where text that could label an element is NOT available. This matches
+                        the design image as there are no text labels present on the form.-->
+
+                        <div class="inputContainer">
+                            <input type="text" required pattern="\w+" id="fname" name="fname" placeholder="First Name" aria-label="First Name">
+                            <p class="inputError" id="fNameError"></p>
+                        </div>
+
+                        <div class="inputContainer">
+                            <input type="text" required pattern="\w+" id="lname" name="lname" placeholder="Last Name" aria-label="Last Name">
+                            <p class="inputError" id="lNameError"></p>
+                        </div>
+
+                        <div class="inputContainer">
+                            <input type="email" required id="userEmail" name="userEmail" placeholder="Email Address" aria-label="Email Address">
+                            <p class="inputError" id="emailError"></p>
+                        </div>
+                        
+                        <div class="inputContainer">
+                            <input type="password" required pattern="\w+" id="password" name="password" placeholder="Password" aria-label="Password">
+                            <p class="inputError" id="passError"></p>
+                        </div>
+                        
+                        <input type="submit" id="submitBtn" value="Claim your free trial" aria-label="Submit and claim your free trial">
+                    </form>
+                    <p id="tosString">By clicking the button, you are agreeing to our <a id="tosLink" href="">Terms and Services</a></p>
+                </div>
+            </div>
+        </main>
+
+    <footer>
+        <p class="attribution">
+            Challenge by <a class="footerLink" href="https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1" role="button" target="_blank">Frontend Mentor</a>.
+            Coded by <a class="footerLink" href="https://www.linkedin.com/in/nicole-fortin-3530b9211" role="button" target="_blank">Nicole Javier Belmonte Fortin</a>.
+        </p>
+    </footer>
+    </body>
+    <script src="index.js"></script> <!-- Link HTML file to javascript at the bottom to make sure jS loads after reading entire code -->
+</html>
