@@ -17,7 +17,7 @@ for (let i = 0; i < inputElements.length; i++) {
 
     const addErrorContainer = document.querySelectorAll(".inputContainer")
     const errorIcon = document.createElement("img")
-    errorIcon.src = "./images/icon-error.svg"
+    errorIcon.src = "./imgs/icon-error.svg"
     errorIcon.className = "errorIcon"
     errorIcon.alt = "Error Icon"
 
